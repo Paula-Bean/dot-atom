@@ -1,0 +1,91 @@
+"*":
+  "autocomplete-python":
+    triggerCompletionRegex: "([. ]|[a-zA-Z_][a-zA-Z0-9_]*)"
+    useKite: false
+  "block-cursor":
+    global:
+      blinkOff:
+        backgroundColor: "#ffffff"
+  "bracket-matcher":
+    autocompleteBrackets: false
+  core:
+    audioBeep: false
+    closeEmptyWindows: false
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "block-cursor"
+      "swackets"
+      "spell-check"
+      "emmet"
+      "rainbow-delimiters"
+      "autocomplete-python"
+      "language-gfm"
+      "proto-repl-charts"
+      "proto-repl"
+      "lisp-paredit"
+      "parinfer"
+      "busy-signal"
+      "tool-bar"
+      "ink"
+      "github"
+      "intentions"
+    ]
+    packagesWithKeymapsDisabled: [
+      "lisp-paredit"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-light-ui"
+      "paula-syntax"
+    ]
+    titleBar: "hidden"
+  editor:
+    fontFamily: "Comic Sans MS"
+    fontSize: 18
+    showLineNumbers: false
+    tabLength: 4
+    tabType: "soft"
+  "exception-reporting":
+    userId: "f7d3b5bd-8aa2-4ab2-864a-ca0ced3df464"
+  "graphviz-preview-plus": {}
+  linter: {}
+  "linter-flake8":
+    hangClosing: true
+    ignoreErrorCodes: [
+      "E501"
+      "E128"
+    ]
+  "linter-ui-default":
+    alwaysTakeMinimumSpace: true
+    decorateOnTreeView: "Files and Directories"
+    gutterPosition: "Left"
+    panelHeight: 176
+    panelRepresents: "Entire Project"
+    showPanel: true
+    showTooltip: false
+    useBusySignal: false
+  "lisp-paredit":
+    enabled: false
+    strict: false
+  "markdown-preview": {}
+  pigments:
+    autocompleteSuggestionsFromValue: true
+    markerType: "gutter"
+  "proto-repl":
+    inkConsole: false
+    leinPath: "/usr/local/bin/lein"
+  "toggle-gutter":
+    showGutters: false
+  "tool-bar":
+    fullWidth: false
+    iconSize: "12px"
+  "webbox-color":
+    fillColorAsBackground: false
+  welcome:
+    showOnStartup: false
+".python.source":
+  editor:
+    showInvisibles: false
+".source.sql":
+  editor:
+    showInvisibles: true

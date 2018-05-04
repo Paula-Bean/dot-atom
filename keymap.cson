@@ -1,0 +1,65 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts. Unlike style sheets however,
+# each selector can only be declared once.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * http://flight-manual.atom.io/using-atom/sections/basic-customization/#_customizing_keybindings
+# * http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/
+#
+# If you're having trouble with your keybindings not working, try the
+# Keybinding Resolver: `Cmd+.` on macOS and `Ctrl+.` on other platforms. See the
+# Debugging Guide for more information: http://flight-manual.atom.io/hacking-atom/sections/debugging/#check-the-keybindings
+#
+# This file uses CoffeeScript Object Notation (CSON).  http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'.editor':
+  'f1': 'line-numbers:toggle'
+
+  # fn-up, fn-down
+  'alt-pageup': 'core:page-up'
+  'alt-pagedown': 'core:page-down'
+
+  'alt-up': 'core:page-up'
+  'alt-down': 'core:page-down'
+
+# Use F3 instead of F2 for bookmarks.
+'.platform-darwin atom-text-editor':
+    'cmd-f3': 'bookmarks:toggle-bookmark'
+    'shift-cmd-f3': 'bookmarks:clear-bookmarks'
+
+'atom-text-editor':
+    'f3': 'bookmarks:jump-to-next-bookmark'
+    'shift-f3': 'bookmarks:view-all'
+    'cmd-r': 'script:run'
+    'shift-cmd-r': 'symbols-view:toggle-file-symbols'
+
+'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="erb"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini]), atom-text-editor[data-grammar~="css"]:not([mini]), atom-text-editor[data-grammar~="stylus"]:not([mini]), atom-text-editor[data-grammar~="sass"]:not([mini]), atom-text-editor[data-grammar~="scss"]:not([mini])':
+  'tab': 'emmet:expand-abbreviation-with-tab'
+
+'.platform-darwin':
+  'control-cmd-R': 'symbols-view:toggle-project-symbols'
+
+# clojure lisp-paredit
+# Provides proper indentation when enter is pressed
+'atom-text-editor[data-grammar~="clojure"]':
+  'enter': 'lisp-paredit:newline'
+
+# Override newline back to original when in Proto-REPL console
+# GitHub Issue: https://github.com/jonspalding/lisp-paredit/issues/26
+'ink-console atom-text-editor[data-grammar~="clojure"]':
+  'enter': 'editor:newline'

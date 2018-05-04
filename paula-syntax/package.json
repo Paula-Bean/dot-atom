@@ -1,0 +1,15 @@
+{
+  "name": "paula-syntax",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "Paula Bean's syntax theme",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "repository": "https://github.com/Paula-Bean/dot-atom/paula-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
